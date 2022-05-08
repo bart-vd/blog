@@ -14,19 +14,17 @@ body {
   padding: 0;
   font-family: $font-text;
   text-rendering: optimizeLegibility;
-  text-size-adjust: 100%;
   background-color: $color-background;
   color: $color-text;
 }
 
-h1 {
-  margin-top: 0;
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 .5em 0;
+  font-weight: 700;
 }
 
-h2, h3, h4, h5, h6 {
-  margin-top: 0em;
-  margin-bottom: .5em;
-  font-weight: 700;
+h1 {
+  font-size: 1.75rem;
 }
 
 h2 {
@@ -38,8 +36,7 @@ h3 {
 }
 
 p {
-  margin-top: 0;
-  margin-bottom: .75em;
+  margin: 0 0 .75em 0;
   line-height: 1.5;
   font-size: 1rem;
 }

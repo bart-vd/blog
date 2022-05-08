@@ -7,5 +7,4 @@ layout: "single"
 menu: "main"
 weight: 40
 ---
-
 This page is a list of what I use (hard- and software) to get my work done.

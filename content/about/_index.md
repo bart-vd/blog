@@ -7,9 +7,6 @@ layout: "single"
 menu: "main"
 weight: 30
 ---
-
-
-
 Hello. My name is Bart Van Dooren. I live in [Pulle][1], a small town in the Flemish speaking part of Belgium (that's in Europe by the way), together with my wife Jill, two kids (six and eleven) and four chickens.
 
 As a day job, I run an [insurance agencey][2] where I am partner and CEO. In my spare time I am addicted to all things tech. Check out my ["uses"][3] page to find out about the gear I am using.

@@ -4,7 +4,6 @@ date: 2022-05-04T22:26:21+02:00
 draft: false
 tags: ["CSS", "BEM"]
 ---
-
 One of the things I struggle with when styling a website in css or Sass is naming things. This sounds pretty mundaine, but without a good naming scheme, one quickly ends up using the same class names for different things.
 
 > “If names be not correct, language is not in accordance with the truth of things.”
