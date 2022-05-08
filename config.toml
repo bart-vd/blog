@@ -1,4 +1,5 @@
 baseURL = 'https://bart-vd.github.io/blog/'
+canonifyurls = true
 languageCode = 'en-us'
 title = '9600 baud'
 
