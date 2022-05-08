@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Bem &middot; 9600 baud</title>
+  <meta name="description" content="" />
+  <meta name="author" content="Bart Van Dooren" />
+  
+  <link type="text/css" rel="stylesheet" href="css/print.css" media="print">
+  
+  <link type="text/css" rel="stylesheet" href="/scss/style.min.css">
+  
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:ital,wght@0,400;0,700&family=IBM+Plex+Sans:ital,wght@0,400;0,700&display=swap" rel="stylesheet">
+
+<script src="https://kit.fontawesome.com/3921c2e573.js" crossorigin="anonymous"></script>
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+  
+  </head>
+  <body class="layout">
+
+    <div class="layout__grid">
+      
+      <aside class="layout__aside">
+        
+<div class="brand">
+  <img class="brand__logo" src="/img/modem-200.jpg"></img>
+  <h1 class="brand__name">9600 baud</h1>
+  <div class="brand__tagline">
+    Internet addict since 1994.
+  </div>
+</div>
+
+
+<nav class="nav">
+  <ul class="nav__list">
+    <li class="nav__item"><a class="nav__link" href="">Home</a></li>
+    <li class="nav__item"><a class="nav__link" href="/posts/"> Posts </a></li><li class="nav__item"><a class="nav__link" href="/tags/"> Tags </a></li><li class="nav__item"><a class="nav__link" href="/about/"> About </a></li><li class="nav__item"><a class="nav__link" href="/uses/"> Uses </a></li>
+    <li class="nav__item"></li><a class="nav__link" href="https://twitter.com/b_vandooren"><i class="fa-brands fa-twitter"></i></a></li>
+    <li class="nav__item"></li><a class="nav__link" href="https://www.instagram.com/bartvandooren/"><i class="fa-brands fa-instagram"></i></a></li>
+  </ul>
+</nav>
+      </aside>
+      
+      <main class="layout__main">
+        
+<article class="post">
+  <h1 class="header header--title">Bem</h1>
+  <time datetime=2022-05-04T22:26:21&#43;0200 class="header header--date">May 4, 2022</time>
+	<div class="tags">
+		
+				<a href="/tags/css" class="tags__link">#Css</a>
+		
+				<a href="/tags/bem" class="tags__link">#Bem</a>
+		
+	</div>
+	<p>One of the things I struggle with when styling a website in css or Sass is naming things. This sounds pretty mundaine, but without a good naming scheme, one quickly ends up using the same class names for different things.</p>
+<blockquote>
+<p>“If names be not correct, language is not in accordance with the truth of things.”
+― Confucius, The Analects of Confucius</p>
+</blockquote>
+<p>In my search for a solution, I stumbled upon the <a href="https://getbem.com">BEM methodology</a>. BEM stands for Block, Element and Modifier. It&rsquo;s a simple naming convention designed to make front end code easier to read and understand, but also easier to scale.</p>
+<p>In essence, using BEM means naming your classes something like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-scss" data-lang="scss"><span style="display:flex;"><span><span style="color:#a6e22e">.block__element--modifier</span>
+</span></span></code></pre></div><p>In HTML, any DOM node within a block can be an element. Within a given block, all elements are semantically equal.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;block&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;block__element&#34;</span>&gt;&lt;/<span style="color:#f92672">span</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span></code></pre></div><p>In CSS, BEM insists on using class name selectors only. Also, no tag names or ids are used, and there is no dependency on other blocks/elements on a page.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-scss" data-lang="scss"><span style="display:flex;"><span><span style="color:#a6e22e">.block__elem</span> { <span style="color:#a6e22e">color</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">#000</span> }
+</span></span></code></pre></div><p>Modifiers in BEM then, are flags on blocks or elements, used to change appearance, behavior or state. In HTML, it&rsquo;s an extra class name which you add to a block/element DOM node. Add modifier classes only to blocks/elements they modify, and keep the original class:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;block block--mod&#34;</span>&gt;...&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;block block--size-big block--shadow-yes&#34;</span>&gt;...&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span></code></pre></div><p>Since I&rsquo;m a sucker for this sort of methodologies, I immediately took to BEM, and implemented it in this site.</p>
+<p>One of the problems I encountered, and which prevented me from fully implementing BEM, is the fact that static site generator <a href="https://gohugo.io">Hugo</a> does not have a way of adding classes to the Markdown files that are the basis for the final posts on the site.</p>
+<p>This means that, contrary to what BEM suggests, I <em>do</em> have to use HTML elements as selectors, so that I can add some styling to things like bold text, headers, etc. But other then that, using BEM suits me just fine.</p>
+<p>To finish up, here are some great articles on BEM to get you started:</p>
+<ul>
+<li><a href="https://www.smashingmagazine.com/2014/07/bem-methodology-for-small-projects/">Scaling Down The BEM Methodology For Small Projects</a></li>
+<li><a href="https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">MindBEMding – getting your head ’round BEM syntax</a></li>
+<li><a href="https://medium.com/objects-in-space/objects-in-space-f6f404727">Objects in Space - A style-guide for modular SASS using SMACSS and BEM</a></li>
+<li><a href="https://webuild.envato.com/blog/how-to-scale-and-maintain-legacy-css-with-sass-and-smacss/">How to Scale and Maintain Legacy CSS with Sass and SMACSS</a></li>
+<li><a href="https://9elements.com/bem-cheat-sheet/">BEM Cheat Sheet</a></li>
+<li><a href="https://codeburst.io/understanding-css-bem-naming-convention-a8cca116d252">Understanding CSS BEM</a></li>
+<li><a href="https://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">BEMIT: Taking the BEM Naming Convention a Step Further</a></li>
+</ul>
+
+</article>
+
+<hr class="divider">
+
+
+<div class="breadcrumbs breadcrumbs--justify">
+	
+	<a class="breadcrumbs__link breadcrumbs__link--bold" href="/posts/2022/theming-your-blog/?ref=footer">« Previous post</a>
+	
+	
+</div>
+      </main>
+    </div>
+
+ </body>
+</html>

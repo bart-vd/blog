@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>First Steps With Hugo &middot; 9600 baud</title>
+  <meta name="description" content="" />
+  <meta name="author" content="Bart Van Dooren" />
+  
+  <link type="text/css" rel="stylesheet" href="css/print.css" media="print">
+  
+  <link type="text/css" rel="stylesheet" href="/scss/style.min.css">
+  
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:ital,wght@0,400;0,700&family=IBM+Plex+Sans:ital,wght@0,400;0,700&display=swap" rel="stylesheet">
+
+<script src="https://kit.fontawesome.com/3921c2e573.js" crossorigin="anonymous"></script>
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+  
+  </head>
+  <body class="layout">
+
+    <div class="layout__grid">
+      
+      <aside class="layout__aside">
+        
+<div class="brand">
+  <img class="brand__logo" src="/img/modem-200.jpg"></img>
+  <h1 class="brand__name">9600 baud</h1>
+  <div class="brand__tagline">
+    Internet addict since 1994.
+  </div>
+</div>
+
+
+<nav class="nav">
+  <ul class="nav__list">
+    <li class="nav__item"><a class="nav__link" href="">Home</a></li>
+    <li class="nav__item"><a class="nav__link" href="/posts/"> Posts </a></li><li class="nav__item"><a class="nav__link" href="/tags/"> Tags </a></li><li class="nav__item"><a class="nav__link" href="/about/"> About </a></li><li class="nav__item"><a class="nav__link" href="/uses/"> Uses </a></li>
+    <li class="nav__item"></li><a class="nav__link" href="https://twitter.com/b_vandooren"><i class="fa-brands fa-twitter"></i></a></li>
+    <li class="nav__item"></li><a class="nav__link" href="https://www.instagram.com/bartvandooren/"><i class="fa-brands fa-instagram"></i></a></li>
+  </ul>
+</nav>
+      </aside>
+      
+      <main class="layout__main">
+        
+<article class="post">
+  <h1 class="header header--title">First Steps With Hugo</h1>
+  <time datetime=2022-04-19T11:40:37&#43;0200 class="header header--date">April 19, 2022</time>
+	<div class="tags">
+		
+				<a href="/tags/blogging" class="tags__link">#Blogging</a>
+		
+				<a href="/tags/hugo" class="tags__link">#Hugo</a>
+		
+	</div>
+	<p>First things first: before anything else, I had to install the <a href="https://gohugo.io">Hugo</a> static site generator, which is going to be the main tool for building the site. In this post, I discuss installing Hugo, and creating a new Hugo site, <em>and</em> we go through the most important folders, explaining what they are for.</p>
+<h2 id="installing-hugo">Installing Hugo</h2>
+<p>Since I&rsquo;m on Mac, this is kind of trivial when you have the fantastic <a href="https://brew.sh">Homebrew</a> installed. Homebrew is a MacOS package manager (analogous to <a href="https://wiki.debian.org/Apt">apt</a> in Debian Linux for instance), which allows you to install Mac software from the command line easily. For installing Hugo, the command is:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ brew install hugo
+</span></span></code></pre></div><p>To verify whether the installation was succesful, type:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ hugo version
+</span></span></code></pre></div><p>Which should result in something like <code>hugo v0.97.2+extended darwin/amd64 BuildDate=unknown</code>.</p>
+<h2 id="create-a-hugo-site">Create a Hugo site</h2>
+<p>Next, creating the basics for a Hugo site is as simple as typing:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ hugo new site blog
+</span></span></code></pre></div><p>This creates a folder called <code>blog</code> which contains a number of files and folders necessary for creating a Hugo site:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ls
+</span></span><span style="display:flex;"><span>archetypes  config.toml  content  data  layouts  public  static  themes
+</span></span></code></pre></div><h2 id="the-folder-structure">The folder structure</h2>
+<h3 id="archetypes">/archetypes</h3>
+<p>When you use the <code>hugo new</code> command to create new content, Hugo creates new <a href="https://www.markdownguide.org">Markdown</a> content files, based on <em>archetypes</em>. These archetypes contain custom preconfigured elements (like title and date) and <a href="https://gohugo.io/content-management/front-matter/">frontmatter</a>. Archetypes save time and promote consistancy for sites using multiple content types.</p>
+<h3 id="config">/config</h3>
+<p>Hugo ships with a large number of configuration directives. The <code>config</code> directory is where those directives are stored as JSON, YAML, or TOML files. Projects with minimal settings can use a single <code>config.toml</code> file at its root. Many sites may need little to no configuration, but Hugo ships with a large number of <a href="https://gohugo.io/getting-started/configuration/#all-configuration-settings">configuration directives</a> for more granular control on how you want Hugo to build your website.</p>
+<h3 id="content">/content</h3>
+<p>All content for your website will live inside this directory. Each top-level folder in Hugo is considered a content section. For example, if your site has three main sections — blog, articles, and tutorials — you will have three directories at content/blog, content/articles, and content/tutorials. <strong>Hugo uses sections to assign default content types</strong>.</p>
+<h3 id="data">/data</h3>
+<p>This directory is used to store configuration files that can be used by Hugo when generating your website. You can write these files in YAML, JSON, or TOML format. In addition to the files you add to this folder, you can also create data templates that pull from dynamic content.</p>
+<h3 id="layouts">/layouts</h3>
+<p>The <code>layouts</code> folder stores templates in the form of <code>.html</code> files that specify how views of your content will be rendered into a static website. Templates include list pages, your homepage, taxonomy templates, partials, single page templates, and more.</p>
+<h3 id="static">/static</h3>
+<p><code>static</code> stores all the static content: images, CSS, JavaScript, etc. When Hugo builds your site, all assets inside your static directory are copied over as-is.</p>
+<h3 id="resources">/resources</h3>
+<p>The <code>resources</code> directory caches some files to speed up generation. It can be also used by template authors to distribute built SASS files, so you don’t have to have the preprocessor installed. The resources directory is not created by default.</p>
+<h3 id="assets">/assets</h3>
+<p>The <code>assets</code> folder stores all the files which need be processed by Hugo Pipes. Only the files whose .Permalink or .RelPermalink are used will be published to the public directory. Note: assets directory is not created by default.</p>
+
+</article>
+
+<hr class="divider">
+
+
+<div class="breadcrumbs breadcrumbs--justify">
+	
+	<a class="breadcrumbs__link breadcrumbs__link--bold" href="/posts/2022/every-journey/?ref=footer">« Previous post</a>
+	
+	
+	<a class="breadcrumbs__link breadcrumbs__link--bold" href="/posts/2022/theming-your-blog/?ref=footer">Next post »</a>
+	
+</div>
+      </main>
+    </div>
+
+ </body>
+</html>
