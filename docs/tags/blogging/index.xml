@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>blogging on 9600 baud</title>
-    <link>/tags/blogging/</link>
+    <link>https://bart-vd.github.io/blog/tags/blogging/</link>
     <description>Recent content in blogging on 9600 baud</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 20 Apr 2022 11:40:46 +0200</lastBuildDate><atom:link href="/tags/blogging/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 20 Apr 2022 11:40:46 +0200</lastBuildDate><atom:link href="https://bart-vd.github.io/blog/tags/blogging/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Theming Your Blog</title>
-      <link>/posts/2022/theming-your-blog/</link>
+      <link>https://bart-vd.github.io/blog/posts/2022/theming-your-blog/</link>
       <pubDate>Wed, 20 Apr 2022 11:40:46 +0200</pubDate>
       
-      <guid>/posts/2022/theming-your-blog/</guid>
+      <guid>https://bart-vd.github.io/blog/posts/2022/theming-your-blog/</guid>
       <description>Out of the box, Hugo does not contain any styling or themes to make your site or blog look good. This is a good thing, because it gives you the possibility to go for your own custom theme that you can build youself in css, or to take the easy route and go for one of the community themes that you can find here.</description>
     </item>
     
     <item>
       <title>First Steps With Hugo</title>
-      <link>/posts/2022/first-steps-with-hugo/</link>
+      <link>https://bart-vd.github.io/blog/posts/2022/first-steps-with-hugo/</link>
       <pubDate>Tue, 19 Apr 2022 11:40:37 +0200</pubDate>
       
-      <guid>/posts/2022/first-steps-with-hugo/</guid>
+      <guid>https://bart-vd.github.io/blog/posts/2022/first-steps-with-hugo/</guid>
       <description>First things first: before anything else, I had to install the Hugo static site generator, which is going to be the main tool for building the site. In this post, I discuss installing Hugo, and creating a new Hugo site, and we go through the most important folders, explaining what they are for.</description>
     </item>
     
     <item>
       <title>Every Journey...</title>
-      <link>/posts/2022/every-journey/</link>
+      <link>https://bart-vd.github.io/blog/posts/2022/every-journey/</link>
       <pubDate>Mon, 18 Apr 2022 11:38:51 +0200</pubDate>
       
-      <guid>/posts/2022/every-journey/</guid>
+      <guid>https://bart-vd.github.io/blog/posts/2022/every-journey/</guid>
       <description>Today marks the start of my blogging adventure. The blog will be contain my personal writings covering anything that interests me: technology, philosophy, classical music, politics, etc. A bit of a hodge podge probably, but interesting enough, I hope.</description>
     </item>
     
