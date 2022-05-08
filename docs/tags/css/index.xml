@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CSS on 9600 baud</title>
+    <link>/tags/css/</link>
+    <description>Recent content in CSS on 9600 baud</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 04 May 2022 22:26:21 +0200</lastBuildDate><atom:link href="/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bem</title>
+      <link>/posts/2022/bem/</link>
+      <pubDate>Wed, 04 May 2022 22:26:21 +0200</pubDate>
+      
+      <guid>/posts/2022/bem/</guid>
+      <description>One of the things I struggle with when styling a website in css or Sass is naming things. This sounds pretty mundaine, but without a good naming scheme, one quickly ends up using the same class names for different things.</description>
+    </item>
+    
+  </channel>
+</rss>
