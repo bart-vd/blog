@@ -1,0 +1,22 @@
+{{ define "main" -}}
+
+<!-- Posts list -->
+
+<h1 class="header header--title">Posts</h1>
+
+{{ range .Pages }}
+<div class="list list--posts">
+  <!-- Left side -->
+  <div class="list__item">
+    <a class="list__link" href="{{ .Permalink }}">{{ .Title }}</a>
+  </div>
+  <!-- Dots -->
+  <div class="dots"> &nbsp; </div>
+  <!-- Right side -->
+  <div class="text" datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">
+    {{ .Date.Format "January 2, 2006" }}
+  </div>
+</div>
+{{ end }}
+
+{{- end }}

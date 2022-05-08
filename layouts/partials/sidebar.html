@@ -1,0 +1,20 @@
+<!-- Logo / title / tagline -->
+<div class="brand">
+  <img class="brand__logo" src="/img/modem-200.jpg"></img>
+  <h1 class="brand__name">{{ .Site.Title }}</h1>
+  <div class="brand__tagline">
+    {{ .Site.Params.description }}
+  </div>
+</div>
+
+<!-- Menu -->
+<nav class="nav">
+  <ul class="nav__list">
+    <li class="nav__item"><a class="nav__link" href="{{ .Site.BaseURL }}">Home</a></li>
+    {{ range .Site.Menus.main -}}
+    <li class="nav__item"><a class="nav__link" href="{{.URL}}"> {{ .Name }} </a></li>
+    {{- end }}
+    <li class="nav__item"></li><a class="nav__link" href="https://twitter.com/b_vandooren"><i class="fa-brands fa-twitter"></i></a></li>
+    <li class="nav__item"></li><a class="nav__link" href="https://www.instagram.com/bartvandooren/"><i class="fa-brands fa-instagram"></i></a></li>
+  </ul>
+</nav>

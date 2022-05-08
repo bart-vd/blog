@@ -1,0 +1,27 @@
+{{ define "main" -}}
+
+<!-- List out first 5 posts with summary -->
+{{ range first 5 .Site.RegularPages -}}
+<article class="post">
+  <h1 class="header header--title">{{ .Title }}</h1>
+  <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}" class="header header--date">{{ .Date.Format "January 2, 2006" }}</time>
+  <div class="paragraph paragraph--summary">
+    {{ .Summary }}
+  </div>
+  <!-- Add "Read more" if Summary is truncated -->
+  {{ if .Truncated }}
+  <div class="breadcrumbs">
+    <a href="{{ .RelPermalink }}" class="breadcrumbs__link">Read More…</a>
+  </div>
+  {{ end }}
+</article>
+{{- end }}
+
+<hr class="divider">
+
+<!-- Breadcrumb to Posts list -->
+<div class="breadcrumbs">
+  <a class="breadcrumbs__link breadcrumbs__link--right breadcrumbs__link--bold" href="/posts/">All posts »</a>
+</div>
+
+{{- end }}

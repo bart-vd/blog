@@ -1,0 +1,35 @@
+.dots {
+  border-bottom: 2px dotted $color-divider;
+  flex: 1;
+  margin: 0 .75em 8px .75em;
+}
+
+.count {
+  display: inline-block;
+  width: 2em;
+  background-color: $color-divider;
+  margin-right: 2em;
+  padding: .25em;
+  border-radius: 50%;
+  font-weight: 700;
+  text-align: center;
+}
+
+.divider {
+  border-top: 1px solid $color-divider;
+}
+
+.breadcrumbs {
+  &--justify {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__link {
+    &--bold {
+      font-weight: 700;
+    }
+    &--right {
+      float: right;
+    }
+  }
+}

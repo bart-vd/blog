@@ -1,0 +1,21 @@
+/* BRAND */
+
+.brand {
+  display: block;
+  width: 100%;
+  margin: .5em;
+  &__logo {
+    border: none;
+    margin-bottom: .5em;
+  }
+  &__name {
+    margin-bottom: .25em;
+    font-family: $font-header-main;
+    font-size: 3.5rem;
+    text-align: center;
+  }
+  &__tagline {
+    text-align: center;
+    color: $color-tagline;
+  }
+}

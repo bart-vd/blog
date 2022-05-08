@@ -1,0 +1,14 @@
+/* HEADER STYLING */
+
+.header {
+  display: block;
+  &--title {
+    margin-bottom: 0em;
+    font-family: $font-header-main;
+    font-size: 2rem;
+  }
+  &--date {
+    margin-bottom: .75em;
+    color: $color-tagline;
+  }
+}

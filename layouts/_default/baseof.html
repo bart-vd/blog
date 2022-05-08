@@ -1,0 +1,16 @@
+{{ partial "head.html" . }}
+  <body class="layout">
+
+    <div class="layout__grid">
+      <!-- Sidebar -->
+      <aside class="layout__aside">
+        {{ partial "sidebar.html" . }}
+      </aside>
+      <!-- Content -->
+      <main class="layout__main">
+        {{ block "main" . -}}{{- end }}
+      </main>
+    </div>
+
+ </body>
+</html>

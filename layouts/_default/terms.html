@@ -1,0 +1,15 @@
+{{ define "main" -}}
+
+<!-- Tags list -->
+
+<h1 class="header header--title">Tags</h1>
+
+<ul class="list list--tags">
+  {{ range .Data.Terms.Alphabetical -}}
+  <li class="list__item">
+    <span class="count">{{ .Count }}</span><a class="list__link" href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+  </li>
+  {{- end }}
+</ul>
+
+{{- end }}

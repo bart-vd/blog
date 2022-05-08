@@ -1,0 +1,16 @@
+baseURL = ''
+languageCode = 'en-us'
+title = '9600 baud'
+
+summaryLength = "30"
+
+[Menus]
+  main = [
+      {Name = "Posts", URL = "/posts/", weight = 10},
+      {Name = "Tags", URL = "/tags/", weight = 20},
+  ]
+
+[Params]
+  description = "Internet addict since 1994."
+  author = "Bart Van Dooren"
+  copyright = "Bart Van Dooren"

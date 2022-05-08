@@ -1,0 +1,29 @@
+{{ define "main" -}}
+
+<!-- Blog post -->
+<article class="post">
+  <h1 class="header header--title">{{ .Title }}</h1>
+  <time datetime={{ .Date.Format "2006-01-02T15:04:05Z0700" }} class="header header--date">{{ .Date.Format "January 2, 2006" }}</time>
+	<div class="tags">
+		{{ range .Params.tags }}
+				<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="tags__link">#{{ . | humanize }}</a>
+		{{ end }}
+	</div>
+	{{ .Content }}
+</article>
+
+<hr class="divider">
+
+<!-- Breadcrumbs -->
+<div class="breadcrumbs breadcrumbs--justify">
+	{{ if .PrevPage }}
+	<a class="breadcrumbs__link breadcrumbs__link--bold" href="{{ .PrevPage.Permalink }}?ref=footer">« Previous post</a>
+	{{ else }}
+	<a class="spacer" href="">&nbsp;</a>
+	{{ end }}
+	{{ if .NextPage }}
+	<a class="breadcrumbs__link breadcrumbs__link--bold" href="{{ .NextPage.Permalink }}?ref=footer">Next post »</a>
+	{{ end }}
+</div>
+
+{{- end }}
