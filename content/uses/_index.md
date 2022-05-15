@@ -9,9 +9,12 @@ weight: 40
 ---
 This page is a list of what I use (hard- and software) to get my work done.
 
-## Hardware:
 
-Main computer:
+![](/img/uses.jpeg)
+
+## Hardware
+
+### Main computer:
 
 - Macbook Pro 16” (2019) - Core i9, 32GB RAM, 1TB SSD
 - Belkin Thunderbolt 3 Dock Pro
@@ -20,11 +23,11 @@ Main computer:
 - Logitech MX Master 3
 - Creative Pebble v3
 
-Server:
+### Server:
 
 - custom built PC (2020) - AMD Ryzen 5 3600, 32GB RAM, 36TB HDD
 
-iOS devices:
+### iOS devices:
 
 - iPhone 12 Pro (2021)
 - iPad Pro 12.9” (2019)
